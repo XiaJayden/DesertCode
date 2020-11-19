@@ -1,0 +1,82 @@
+//SET BACKGROUND
+setProperty("screen1", "background-color", rgb(219, 216, 53));
+//SKY STUFF
+function drawSky() {
+  penUp();
+  turnTo(0);
+  moveTo(0, 100);
+  penWidth(200);
+  penColor("skyblue");
+  penDown();
+  turnRight(90);
+  moveForward(1000);
+}
+
+
+//CACTUS STUFF
+function drawAllCactuses(number) {
+  for (var i = 0; i < number; i++) {
+move(randomNumber(20,250), randomNumber(200,400));
+    drawCactus(randomNumber (5,30));
+  }
+}
+function drawCactus(size) {
+  penColor("green");
+penUp();
+  penWidth(size);
+  penDown();
+  turnTo(0);
+  moveForward(size + 50);
+  turnRight(90);
+  moveForward(size + 20);
+  turnLeft(90);
+  moveForward(size + 20);
+ turnLeft(180);
+ moveForward(size + 20);
+  turnRight(90);
+  moveForward(size + 20);
+  turnRight(90);
+  moveForward(size + 20);
+turnLeft(90);
+moveForward(size + 10);
+turnLeft(90);
+moveForward(size + 40);
+turnRight(90);
+moveForward(size + 15);
+turnRight(90);
+moveForward(size + 10);
+turnLeft(180);
+moveForward(size +10);
+turnLeft(90);
+moveForward(size +15);
+turnRight(90);
+moveForward(size + 30);
+turnLeft(90);
+moveForward (size + 10);
+penUp();
+}
+
+//SNAKE STUFF
+function drawAllSnakes(number) {
+  for (var i = 0; i < number; i++) {
+    drawSnake(50, 2);
+  }
+}
+function drawSnake(radius, numWaves){
+  penUp();
+  moveTo(randomNumber(86,280), randomNumber(279,412));
+  penRGB(0,randomNumber(150,200),0);
+  penWidth(randomNumber(20, 25));
+  turnTo(90);
+  penDown();
+  arcLeft(30,radius);
+  
+  // Repeatedly switch between left and right
+  for(var i = 0; i < numWaves; i++){
+    arcRight(60,radius);
+    arcLeft(60,radius);
+  }
+  penUp();
+}
+
+
