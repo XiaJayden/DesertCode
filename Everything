@@ -22,7 +22,6 @@ move(randomNumber(20,250), randomNumber(200,400));
 }
 function drawCactus(size) {
   penColor("green");
-penUp();
   penWidth(size);
   penDown();
   turnTo(0);
@@ -55,6 +54,7 @@ turnLeft(90);
 moveForward (size + 10);
 penUp();
 }
+
 
 //SNAKE STUFF
 function drawAllSnakes(number) {
