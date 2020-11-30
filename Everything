@@ -78,5 +78,43 @@ function drawSnake(radius, numWaves){
   }
   penUp();
 }
-
-
+//Cloud Stuff
+function drawCloud(Cradius, wiggles1, wiggles2) {
+  penUp();
+  penColor("white");
+  moveTo(110, 70);
+  penWidth(45);
+  turnTo(60);
+  penDown();
+  for(var i = 0; i < wiggles1; i++){
+    arcRight(60,Cradius);
+    arcLeft(60,Cradius);
+  }
+  turnRight(45);
+  for(var i2 = 0; i2 < wiggles2; i2++){
+    arcRight(60,Cradius);
+    arcLeft(60,Cradius);
+  }
+  turnRight(45);
+  for(i2 = 0; i2 < wiggles2; i2++){
+    arcRight(60,Cradius);
+    arcLeft(60,Cradius);
+  }
+  turnRight(90);
+  for(i = 0; i < wiggles1+0; i++){
+    arcRight(60,Cradius);
+    arcLeft(60,Cradius);
+  }
+  turnRight(45);
+  for(i = 0; i < wiggles2; i++){
+    arcRight(60,Cradius);
+    arcLeft(60,Cradius);
+  }
+  turnRight(45);
+  for(i2=0; i2 < wiggles2; i2++){
+    arcRight(60,Cradius);
+    arcLeft(60,Cradius);
+  }
+  turnRight(45);
+  penUp();
+}
