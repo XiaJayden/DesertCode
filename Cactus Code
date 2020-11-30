@@ -1,0 +1,34 @@
+function drawCactus(size) {
+  penColor("green");
+  penWidth(size);
+  penDown();
+  turnTo(0);
+  moveForward(size + 50);
+  turnRight(90);
+  moveForward(size + 20);
+  turnLeft(90);
+  moveForward(size + 20);
+ turnLeft(180);
+ moveForward(size + 20);
+  turnRight(90);
+  moveForward(size + 20);
+  turnRight(90);
+  moveForward(size + 20);
+turnLeft(90);
+moveForward(size + 10);
+turnLeft(90);
+moveForward(size + 40);
+turnRight(90);
+moveForward(size + 15);
+turnRight(90);
+moveForward(size + 10);
+turnLeft(180);
+moveForward(size +10);
+turnLeft(90);
+moveForward(size +15);
+turnRight(90);
+moveForward(size + 30);
+turnLeft(90);
+moveForward (size + 10);
+penUp();
+}
